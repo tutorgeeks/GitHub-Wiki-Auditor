@@ -60,7 +60,7 @@ def main():
             loginResponse = gitHubSession.post("https://github.com/session", data=loginData)
             if "Incorrect username or password" in loginResponse.text:
                 print "Your GitHub username/password is incorrect!"
-                sys.exit(1)
+                #sys.exit(1)
         except Exception as sessionError:
             print "[*] Exiting - there was an issue authenticating to GitHub using the provided credentials\n"
             print "[*] {0}".format(sessionError)
